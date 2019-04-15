@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Gif;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+        $gifs = ['talyor_swift', 'colourful_ribbon', 'radial_colours'];
+
+        foreach ($gifs as $gif) {
+           factory(Gif::class)->create(['name' => $gif]); 
+        }
     }
 }
