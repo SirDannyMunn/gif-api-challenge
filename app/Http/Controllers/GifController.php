@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Gif;
 use Illuminate\Http\Request;
 use App\Filters\GifFilters;
+use App\Http\Resources\Gif as GifResource;
+
 class GifController extends Controller
 {
     /**
@@ -30,6 +32,6 @@ class GifController extends Controller
      */
     public function index(Request $request, GifFilters $filters)
     {
-        return $this->gif->filter($filters)->get();
+        return new GifResource($this->gif->filter($filters)->get());
     }
 }

@@ -13,11 +13,13 @@ class GifTest extends TestCase
      */
     public function testSearch()
     {
-        factory('App\Gif')->create(['name' => 'test_name']);
+        $name = 'test_name';
+
+        factory('App\Gif')->create(['name' => $name]);
 
         $this->get('v1/gifs?search=test');
 
-        $this->assertEquals('test_name', json_decode($this->response->getContent(), true)[0]['name']);
+        $this->assertEquals(ucfirst($name), json_decode($this->response->getContent(), true)["data"][0]["data"]["gif"]["name"]);
 
         $this->assertResponseStatus(200);
     }
