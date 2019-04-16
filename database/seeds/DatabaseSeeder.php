@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $gifs = ['talyor_swift', 'colourful_ribbon', 'radial_colours'];
+        $gifs = ['taylor_swift', 'colourful_ribbon', 'radial_colours'];
 
         foreach ($gifs as $gif) {
            factory(Gif::class)->create(['name' => $gif]); 
