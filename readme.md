@@ -33,14 +33,14 @@ It uses the single responsibillity principle by delegating the filtering/search 
 ## Files included
 
 * Gif
-    _Model for gifs_
+    * _Model for gifs_
 * GifController
-    _Contoller logic for gifs_
+    * _Contoller logic for gifs_
 * Filters
-    _Abstracted functionallity for filters_
+    * _Abstracted functionallity for filters_
 * GifFilters
-    _filters for GET requests_
+    * _filters for GET requests_
 * GifTest
-    _Unit tests for Gif_
+    * _Unit tests for Gif_
 * GifResource
-    _Resource class (data formatter) for gif_
+   *  _Resource class (data formatter) for gif_
